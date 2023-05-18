@@ -1,0 +1,306 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/*generales*/
+
+@import "https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap";
+
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+    background: linear-gradient(180deg, rgba(0,155,219,1) 0%, rgba(50,175,226,1) 50%, rgba(102,195,233,1) 100%);
+    font-family: "Roboto", sans-serif;
+    letter-spacing: .2rem;
+}
+
+h1 {
+    margin: 1rem;
+    color: white;
+    font-size: 2rem;
+}
+
+.principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Header*/
+
+.encabezado {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo:hover {
+    opacity: 75%;
+}
+
+.titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.curso {
+    font-size: 2rem;
+}
+
+.alumno {
+    font-size: 1.5rem;
+}
+
+.redes {
+    display: flex;
+    flex-direction: row;
+}
+
+.redes a {
+    margin: .5rem;
+    padding: .5rem;
+}
+
+.icono {
+    fill: white;
+}
+
+.icono:hover {
+    fill: silver;
+}
+
+/*Menú principal*/
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.opcion {
+    width: 25vw;
+    margin: 2rem;
+    padding: 2rem;
+    border: white solid .2rem;
+    border-radius: .5rem;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+.opcion:hover {
+    color: #009bdb;
+    background-color: white;
+    border-color: #009bdb;
+}
+
+.opcion:visited {
+    color: white;
+}
+
+.opcion:visited:hover {
+    color: #009bdb;
+}
+
+/*Reloj*/
+
+@font-face {
+    font-family: "Digital";
+    src: url(../fonts/digital-7.regular.ttf);
+}
+
+.reloj {
+    margin: 2rem;
+    padding: 2rem;
+    border: white solid .2rem;
+    border-radius: .5rem;
+    font-family: "Digital", sans-serif;
+    font-size: 2rem;
+    color: red;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.reloj p {
+    margin: .5rem;
+}
+
+.fecha {
+    display: flex;
+    flex-direction: row;
+}
+
+.hora {
+    display: flex;
+    flex-direction: row;
+}
+
+/*Tesoro*/
+
+.pista {
+    margin: 2rem;
+    padding: 1rem;
+    background-color: white;
+    color: #009bdb;
+    border: #009bdb solid .2rem;
+    border-radius: .5rem;
+}
+
+.mapa {
+    margin: 2rem;
+    border: white solid .2rem;
+    border-radius: .5rem;
+}
+
+/*Tareas*/
+
+.tareas {
+    display: flex;
+    flex-direction: row;
+}
+
+.agregarTareas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.agregarTareas * {
+    width: 40vw;
+    margin: 1rem;
+}
+
+.agregarTituloTarea {
+    height: 2rem;
+    padding: .1rem .25rem;
+    border: white solid .2rem;
+    border-radius: .25rem;
+    color: black;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    letter-spacing: .2rem;
+}
+
+.agregarTituloTarea::placeholder {
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    letter-spacing: .2rem;
+}
+
+.agregarDescripcionTarea {
+    height: 10rem;
+    padding: .1rem .25rem;
+    border: white solid .2rem;
+    border-radius: .25rem;
+    color: black;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    letter-spacing: .2rem;
+}
+
+.agregarDescripcionTarea::placeholder {
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    letter-spacing: .2rem;
+}
+
+.agregarTareaBoton {
+    padding: 1rem;
+    border: white solid .2rem;
+    border-radius: .5rem;
+    background-color: transparent;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    color: white;
+    letter-spacing: .2rem;
+}
+
+.agregarTareaBoton:hover {
+    color: #009bdb;
+    background-color: white;
+    border-color: #009bdb;
+}
+
+.mostrarTareas {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mostrarTarea {
+    width: 40vw;
+    margin: 1rem;
+    border: white solid .2rem;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white;
+    word-break: break-all;
+}
+
+.mostrarTituloTarea {
+    margin: .5rem;
+}
+
+.mostrarDescripcionTarea {
+    margin: .5rem;
+    font-size: .75rem;
+}
+
+.borrarTareaBoton {
+    width: 10vw;
+    margin: .5rem;
+    padding: .5rem;
+    border: white solid .2rem;
+    border-radius: .5rem;
+    background-color: transparent;
+    color: white;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    text-align: center;
+    align-self: flex-end;
+}
+
+.borrarTareaBoton:hover {
+    color: #009bdb;
+    background-color: white;
+    border-color: #009bdb;
+}
+
+/*volver al menú principal*/
+
+.regresar {
+    margin: 2rem;
+    padding: 1rem;
+    border: white solid .2rem;
+    border-radius: .5rem;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.regresar:hover {
+    color: #009bdb;
+    background-color: white;
+    border-color: #009bdb;
+}
+
+.regresar:visited {
+    color: white;
+}
+
+.regresar:visited:hover {
+    color: #009bdb;
+}
