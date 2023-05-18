@@ -20,6 +20,7 @@ h1 {
     margin: 1rem;
     color: white;
     font-size: 2rem;
+    text-align: center;
 }
 
 .principal {
@@ -35,7 +36,8 @@ h1 {
     color: white;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
 }
 
@@ -51,10 +53,12 @@ h1 {
 
 .curso {
     font-size: 2rem;
+    text-align: center;
 }
 
 .alumno {
     font-size: 1.5rem;
+    text-align: center;
 }
 
 .redes {
@@ -85,7 +89,7 @@ h1 {
 }
 
 .opcion {
-    width: 25vw;
+    width: 50vw;
     margin: 2rem;
     padding: 2rem;
     border: white solid .2rem;
@@ -110,75 +114,22 @@ h1 {
     color: #009bdb;
 }
 
-/*Reloj*/
-
-@font-face {
-    font-family: "Digital";
-    src: url(../fonts/digital-7.regular.ttf);
-}
-
-.reloj {
-    margin: 2rem;
-    padding: 2rem;
-    border: white solid .2rem;
-    border-radius: .5rem;
-    font-family: "Digital", sans-serif;
-    font-size: 2rem;
-    color: red;
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.reloj p {
-    margin: .5rem;
-}
-
-.fecha {
-    display: flex;
-    flex-direction: row;
-}
-
-.hora {
-    display: flex;
-    flex-direction: row;
-}
-
-/*Tesoro*/
-
-.pista {
-    margin: 2rem;
-    padding: 1rem;
-    background-color: white;
-    color: #009bdb;
-    border: #009bdb solid .2rem;
-    border-radius: .5rem;
-}
-
-.mapa {
-    margin: 2rem;
-    border: white solid .2rem;
-    border-radius: .5rem;
-}
-
 /*Tareas*/
 
 .tareas {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+}
+
+.agregarTareas * {
+    width: 80vw;
+    margin: 1rem;
 }
 
 .agregarTareas {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.agregarTareas * {
-    width: 40vw;
-    margin: 1rem;
 }
 
 .agregarTituloTarea {
@@ -233,14 +184,13 @@ h1 {
 }
 
 .mostrarTareas {
-    width: 50vw;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .mostrarTarea {
-    width: 40vw;
+    width: 80vw;
     margin: 1rem;
     border: white solid .2rem;
     border-radius: .5rem;
@@ -261,7 +211,7 @@ h1 {
 }
 
 .borrarTareaBoton {
-    width: 10vw;
+    width: 20vw;
     margin: .5rem;
     padding: .5rem;
     border: white solid .2rem;
@@ -278,6 +228,62 @@ h1 {
     color: #009bdb;
     background-color: white;
     border-color: #009bdb;
+}
+
+/*Tesoro*/
+
+.pista {
+    margin: 2rem;
+    padding: 1rem;
+    background-color: white;
+    color: #009bdb;
+    border: #009bdb solid .2rem;
+    border-radius: .5rem;
+    text-align: center;
+}
+
+.mapa {
+    width: 300px;
+    height: 300px;
+    margin: 2rem;
+    border: white solid .2rem;
+    border-radius: .5rem;
+}
+
+/*Reloj*/
+
+@font-face {
+    font-family: "Digital";
+    src: url(../fonts/digital-7.regular.ttf);
+}
+
+.reloj {
+    margin: 2rem;
+    padding: 2rem;
+    border: white solid .2rem;
+    border-radius: .5rem;
+    font-family: "Digital", sans-serif;
+    font-size: 1rem;
+    color: red;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.reloj p {
+    margin: .5rem;
+}
+
+.fecha {
+    display: flex;
+    flex-direction: row;
+}
+
+.hora {
+    display: flex;
+    flex-direction: row;
 }
 
 /*volver al menú principal*/
@@ -303,4 +309,43 @@ h1 {
 
 .regresar:visited:hover {
     color: #009bdb;
+}
+
+/*Media queries*/
+
+@media screen and (min-width: 768px){
+    .tareas {
+        flex-direction: row;
+    }
+    .agregarTareas {
+        width: 50vw;
+    }
+    .agregarTareas * {
+        width: 30vw;
+    }
+    .mostrarTareas {
+        width: 50vw;
+    }
+    .mostrarTarea {
+        width: 30vw;
+    }
+    .borrarTareaBoton {
+        width: 10vw;
+    }
+    .mapa {
+        width: 400px;
+        height: 400px;
+    }
+    .reloj {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .encabezado {
+        justify-content: space-between;
+    }
+    .opcion {
+        width: 25vw;
+    }
 }

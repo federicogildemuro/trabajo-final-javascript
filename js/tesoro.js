@@ -1,5 +1,6 @@
-const ANCHO = 400;
-const ALTO = 400;
+let $map = document.getElementById("mapa");
+const ANCHO = $map.clientHeight;
+const ALTO = $map.clientWidth;
 
 function obtenerNumeroAleatorio(tamanio) {
     return Math.floor(Math.random() * tamanio);
@@ -10,7 +11,6 @@ let objetivo = {
     y: obtenerNumeroAleatorio(ALTO),
 };
 
-let $map = document.getElementById("mapa");
 let $pista = document.getElementById("pista");
 let clicks = 0;
 
@@ -21,7 +21,7 @@ function obtenerDistancia(evento, objetivo) {
 }
 
 function darPista(distancia) {
-    if(distancia < 40) {
+    if(distancia >= 0 && distancia < 40) {
         return "Hirviendo";
     }
     else if(distancia < 60) {
@@ -36,10 +36,13 @@ function darPista(distancia) {
     else if(distancia < 150) {
         return "Frío";
     }
-    else if(distancia < 200) {
+    else if(distancia <= 200) {
         return "Muy frío";
     }
-    return "Congelado";
+    else if(distancia > 200) {
+        return "Congelado";
+    }
+    return "Hirviendo";
 }
 
 $map.addEventListener("click", function (evento) {
@@ -55,7 +58,7 @@ $map.addEventListener("click", function (evento) {
     } else {
         $pista.style.color = "red";
     }
-    if(distancia < 20) {
+    if(distancia <= 20) {
         alert("Has encontrado el tesoro en " + clicks + " clicks");
         location.reload();
     }
